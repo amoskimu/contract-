@@ -1,0 +1,241 @@
+/* Global Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #005f73; /* Rich teal color for professional look */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    background-image: url('{% static "images/header-bg.jpg" %}');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; /* Slight fade effect */
+    z-index: -1;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 300; /* Light weight for better readability */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcb77; /* Bright accent color for hover */
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 600; /* Bold and strong header */
+    color: #005f73;
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 300; /* Lighter text for description */
+}
+
+/* Why Choose Us Section */
+#why-choose-us {
+    padding: 60px 20px;
+    background-color: #e7f6f2;
+    text-align: center;
+}
+
+#why-choose-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #005f73;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.feature-icon {
+    flex: 1;
+    padding: 20px;
+}
+
+.feature-text {
+    flex: 3;
+    text-align: left;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #004d40; /* Dark green for headings */
+}
+
+.feature p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555; /* Lighter gray text */
+}
+
+/* Call to Action (CTA) */
+#cta {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #005f73;
+    color: #fff;
+    margin-top: 60px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#cta h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.cta-button {
+    background-color: #ffcb77;
+    color: #005f73;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #ff9a3e;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.3em;
+    }
+
+    #about h2 {
+        font-size: 2.2em;
+    }
+
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-button {
+        font-size: 1.5em;
+        padding: 14px 28px;
+    }
+}

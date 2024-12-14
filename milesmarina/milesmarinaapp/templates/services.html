@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Miles Marina Construction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'service.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Our Premium Services</h1>
+        <p>Explore the wide range of expert construction services we offer to make your marina projects a reality.</p>
+    </header>
+
+    <main>
+        <section id="services">
+            <h2>Our Expertise</h2>
+            <div class="service-container">
+                <div class="service">
+                    <img src="{% static 'images/marina-construction.jpg' %}" alt="Custom Marina Construction">
+                    <h3>Custom Marina Construction</h3>
+                    <p>We specialize in designing and building customized marinas to suit your unique needs. Whether you're looking for a peaceful recreational marina or a bustling commercial harbor, we bring your vision to life with quality craftsmanship and attention to detail.</p>
+                </div>
+
+                <div class="service">
+                    <img src="{% static 'images/dock-installation.jpg' %}" alt="Dock Installation and Maintenance">
+                    <h3>Dock Installation and Maintenance</h3>
+                    <p>From designing new docks to providing comprehensive maintenance services, our team ensures that your docks are durable, safe, and operational year-round. We handle every detail, so you can focus on enjoying your space.</p>
+                </div>
+
+                <div class="service">
+                    <img src="{% static 'images/seawall-repair.jpg' %}" alt="Seawall Repairs">
+                    <h3>Seawall Repairs</h3>
+                    <p>Protect your property with reliable seawall repairs and installations. Our experts assess the integrity of your seawall and carry out repairs that stand the test of time, keeping your waterfront safe from erosion and damage.</p>
+                </div>
+
+                <div class="service">
+                    <img src="{% static 'images/boat-lift.jpg' %}" alt="Boat Lift Services">
+                    <h3>Boat Lift Services</h3>
+                    <p>We offer top-of-the-line boat lift installation and maintenance, ensuring your boat is safely stored and easily accessible. Whether you're lifting small watercrafts or large yachts, we provide solutions tailored to your needs.</p>
+                </div>
+
+                <div class="service">
+                    <img src="{% static 'images/underwater-construction.jpg' %}" alt="Underwater Construction">
+                    <h3>Underwater Construction</h3>
+                    <p>Our underwater construction services are perfect for projects requiring expert handling beneath the surface. From piling and foundation work to underwater repairs, we have the equipment and expertise to tackle any challenge.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <h2>Ready to Bring Your Project to Life?</h2>
+            <p>Get in touch with us to discuss your marina construction needs. Our team is ready to create a custom solution for your space.</p>
+            <a href="{% url 'contact' %}" class="cta-button">Contact Us</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Miles Marina Construction. All rights reserved.</p>
+    </footer>
+</body>
+</html>

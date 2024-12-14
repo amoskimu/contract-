@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Miles Marina Construction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Miles Marina Construction</h1>
+        <p>Your trusted partner in high-quality construction services</p>
+        <nav>
+            <ul>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Miles Marina Construction, we specialize in delivering top-tier construction services with a focus on quality, safety, and customer satisfaction. With over 20 years of experience, we have built a reputation for excellence in both residential and commercial projects.</p>
+            <p>Our team of experts is committed to transforming your ideas into reality. Whether you need a new building, renovation, or general contracting services, we ensure that every project meets the highest standards of craftsmanship and efficiency.</p>
+        </section>
+
+        <section id="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <div class="feature">
+                <div class="feature-icon">
+                    <!-- Replace with the downloaded image file path -->
+                    <img src="{% static 'images/quality.png' %}" alt="Quality Construction">
+                </div>
+                <div class="feature-text">
+                    <h3>Quality & Craftsmanship</h3>
+                    <p>We pride ourselves on our exceptional workmanship. Every project we undertake is handled with precision, care, and a commitment to delivering the best results.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <!-- Replace with the downloaded image file path -->
+                    <img src="{% static 'images/timely.png' %}" alt="Timely Completion">
+                </div>
+                <div class="feature-text">
+                    <h3>On-Time Delivery</h3>
+                    <p>We understand the importance of deadlines. Our team ensures that every project is completed on time without compromising on quality.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <!-- Replace with the downloaded image file path -->
+                    <img src="{% static 'images/safety.png' %}" alt="Safety Standards">
+                </div>
+                <div class="feature-text">
+                    <h3>Safety First</h3>
+                    <p>Safety is our priority. We adhere to the highest safety standards to ensure the well-being of our team and the success of every project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <h2>Ready to Build Your Dream Project?</h2>
+            <p>Contact us today to discuss your construction needs and get a free consultation!</p>
+            <!-- Replace with the correct image file path -->
+            <img src="{% static 'images/cta-image.png' %}" alt="Get in Touch" class="cta-image">
+            <a href="{% url 'contact' %}" class="cta-button">Get in Touch</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Miles Marina Construction. All rights reserved.</p>
+    </footer>
+</body>
+</html>

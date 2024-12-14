@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">   
+            <h1>Log in</h1>
+            <p>
+                Need an account? <a href="/register">Create an account</a>
+            </p>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username or email" required>
+                </div>
+                <div class="form-group password-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="toggle-password" onclick="togglePassword()">Show</span>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="keep-logged-in" name="keep_logged_in">
+                    <label for="keep-logged-in">Keep me logged in</label>
+                </div>
+                <button type="submit" class="btn">Log in</button>
+            </form>
+            <div class="form-links">
+                <a href="/forgot-username">Forgot username?</a>
+                <a href="/forgot-password">Forgot password?</a>
+                <a href="/help">Can't log in?</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleText = document.querySelector(".toggle-password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleText.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                toggleText.textContent = "Show";
+            }
+        }
+    </script>
+</body>
+</html>
